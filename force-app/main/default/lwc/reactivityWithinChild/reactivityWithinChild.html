@@ -1,0 +1,15 @@
+<template>
+    <div class=slds-m-around_medium>
+        <b>Child Reactive Value is: <i>{userAddress}</i></b>
+        <template for:each={personalDetails} for:item="details">
+            <div key={details.index}>
+                <br>GUID from parent: {details.guid}
+                <br>Personal Details for: {details.name}
+                <br>Your Balance is: {details.balance}
+                <template for:each={details.friends} for:item="friend">
+                    <div key={friend.id}>{friend.id} - {friend.name}</div>
+                </template>
+            </div>
+        </template>
+    </div>
+</template>

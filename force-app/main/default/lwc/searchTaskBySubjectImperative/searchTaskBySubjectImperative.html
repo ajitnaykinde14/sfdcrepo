@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Search Task BY Subject Imperative Way">
+        <div class="slds-p-around_medium">
+            <lightning-input value={subject} type="text" variant="standard" name="Task Subject" label="Task Subject"
+                onchange={handleSubjectInput} placeholder="type task subject here..." required></lightning-input>
+        </div>
+        <div>
+            <lightning-button class="slds-m-left_x-small" icon-name="utility:choice" label="Search Subject"
+                variant="outline" onclick={searchSubject}></lightning-button>
+        </div>
+        <br />
+        <template lwc:if={showTable}>
+            <table class="slds-table slds-p-around_xx-small lgc-bg">
+                <tr>
+                    <th>Id</th>
+                    <th>Subject</th>
+                    <th>ActivityDate</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                </tr>
+                <template for:each={taskList} for:item=tasks>
+                    <tr key={tasks.Id}>
+                        <td>{tasks.Id}</td>
+                        <td>{tasks.Subject}</td>
+                        <td>{tasks.ActivityDate}</td>
+                        <td>{tasks.Priority}</td>
+                        <td>{tasks.Status}</td>
+                    </tr>
+                </template>
+            </table>
+        </template>
+    </lightning-card>
+</template>

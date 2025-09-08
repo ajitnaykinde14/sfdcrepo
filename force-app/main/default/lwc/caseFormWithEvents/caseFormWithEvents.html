@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Case Form With Event!!">
+        <div class="slds-p-around_medium">
+            <lightning-record-edit-form density="compact" object-api-name={objectApiName} onsubmit={handleSubmit}
+                onsuccess={handleSuccess} onerror={handleError} onload={handleLoad}>
+                <lightning-messages></lightning-messages>
+                <!-- create a case and see basically how the events are fired behind the scene -->
+                <lightning-input-field field-name="Subject"></lightning-input-field>
+                <lightning-input-field field-name="Priority"></lightning-input-field>
+                <lightning-input-field field-name="Status" required></lightning-input-field>
+
+                <lightning-button variant="brand" label="Create Case" title="Save" type="submit"></lightning-button>
+                <lightning-button variant="outline" class="slds-m-left_small" label="Reset Form" title="Reset"
+                    type="reset"></lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>

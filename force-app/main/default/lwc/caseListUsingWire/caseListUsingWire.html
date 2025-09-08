@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Show Cases Using Wire Method">
+        <template for:each={CaseList} for:item="cases">
+            <li key={cases.Id}>
+                <b>{cases.Subject}</b> - {cases.Reason} - {cases.Priority}
+            </li>
+        </template>
+        <template if:true={errorMessage}>
+            Error loading: {errorMessage}
+        </template>
+    </lightning-card>
+</template>

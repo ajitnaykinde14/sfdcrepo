@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="My Related Tasks - Dependent Wire">{accountName}
+        <template lwc:if={taskFound}>
+            <template for:each={taskList} for:item="taskRec">
+                {taskRec.Subject} - {taskRec.Priority} - {taskRec.ActivityDate} - {taskRec.Status}
+            </template>
+        </template>
+    </lightning-card>
+</template>

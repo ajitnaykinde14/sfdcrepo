@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Import Utility!!">
+        <div class="slds-m-around_medium">
+            <i>The current logged-in user is: </i><b>{UId}</b><br />
+            <i>Does he has permission set enabled? </i><b>{hasPermissions}</b><br />
+            <i>Your devive factor is: </i><b>{deviceInfo}</b><br />
+            <i>Language info: </i><b>{language}</b><br />
+            <i>Locale info: </i><b>{localZone}</b><br />
+            <i>Currency info: </i><b>{currency}</b><br />
+        </div>
+        <div class="slds-m-around_medium">
+            <template lwc:if={Show_in_prod}>
+                Welcome to your <b>production</b> system.
+            </template>
+            <template lwc:else>
+                Welcome to your <b>sandbox</b> system.
+            </template>
+        </div><br/>
+        <div>
+            <img class="slds-m-around_medium" src={src} /><br />
+            <img class="slds-m-around_medium" src={svgSample} />
+        </div>
+    </lightning-card>
+</template>

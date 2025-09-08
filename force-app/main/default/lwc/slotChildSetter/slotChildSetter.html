@@ -1,0 +1,19 @@
+<template>
+    <div class="slds-m-around_medium">
+        <lightning-card title="Ready to accept slots!!">
+            <!-- this is basic use case,Un-named default slot if there is no name for the slot -->
+            <slot></slot> 
+            <!-- named slots -->
+            <slot name="header"></slot> 
+            <slot name="body"></slot> 
+            <slot name="footer"></slot> 
+        </lightning-card>
+    </div>
+    <!-- advance use case: 
+     Form
+     header
+     main content
+     footer
+     Now, how to ensure what goes to header,main content & footer using slot concept 
+     you have to create multiple slot with diff name -->
+</template>

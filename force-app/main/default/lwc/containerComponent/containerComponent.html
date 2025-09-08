@@ -1,0 +1,17 @@
+<template>
+    <p>
+        Did I find any products? => <i>{productsFound}</i>
+    </p>
+    <template lwc:if={hasProduct}>
+        <template for:each={productList} for:item="eachProduct">
+            <p key={eachProduct.id}>
+                <i>
+                    <c-child-component product-id={eachProduct.id} product-name={eachProduct.name} product-rating={eachProduct.rating}></c-child-component>
+                </i>
+            </p>
+        </template>
+        <template lwc:if={parentCallChild}>
+            <br><b><i>Show that parent called the method to show this! It has not been called by child or the current component itself.</i></b>
+        </template>
+    </template>
+</template> 

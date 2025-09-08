@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="Search Task By Subject - fetch data on page load">
+        <template for:each={taskList} for:item="task">
+            <li class="slds-p-left_small" key={task.Id}><b>{task.Id}</b> : <i>{task.Subject} - {task.Priority} - {task.ActivityDate}</i></li>
+        </template>
+    </lightning-card>
+</template>

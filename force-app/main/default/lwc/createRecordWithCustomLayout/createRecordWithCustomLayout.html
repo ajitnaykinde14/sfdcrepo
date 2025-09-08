@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Create Record With Custom Layout!!">
+        <lightning-record-edit-form object-api-name="Case">
+            <lightning-messages></lightning-messages>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input-field class="slds-p-around_medium" field-name="Subject" required></lightning-input-field>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-input-field class="slds-p-around_medium" field-name="Type"></lightning-input-field>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-input-field class="slds-p-around_medium" field-name="Reason"></lightning-input-field>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-input-field class="slds-p-around_medium" field-name="Origin"></lightning-input-field>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-input-field class="slds-p-around_medium" field-name="Priority"></lightning-input-field>
+                </div>
+                <div class="slds-col slds-size_3-of-3">
+                    <lightning-input-field class="slds-p-around_medium" field-name="SLAViolation__c"></lightning-input-field>
+                </div>
+                <div class="slds-col slds-size_3-of-3">
+                    <lightning-input-field class="slds-p-around_medium" field-name="Description"></lightning-input-field>
+                </div><br/>
+                <lightning-button type="submit" class="slds-align_absolute-center" label="Create" variant="brand"></lightning-button>
+                <lightning-button type="reset" class="slds-align_absolute-center" label="Reset" variant="Outline"></lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

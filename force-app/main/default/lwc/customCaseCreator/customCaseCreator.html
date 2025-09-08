@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Custom Case Creator Form!!">
+        <!-- allowing user to fill mandatory fields but this time LDS not available -->
+        <!-- Ask user multiple input -->
+        <div class="slds-m-around_medium lgc-bg">
+            <lightning-input type="text" value={subject} onchange={populateSubject} label="Enter Subject" placeholder="type your subject here..."
+                required>
+            </lightning-input>
+
+            <lightning-combobox name="priority" value={priority} onchange={populatePriority} label="Priority" placeholder="Select Priority"
+                options={options}>
+            </lightning-combobox>
+
+            <lightning-textarea max-length="1000" name="Description" value={description} onchange={populateDescription}
+                label="Enter issue you are facing" placeholder="type issue here...">
+            </lightning-textarea>
+        </div>
+        <div class="slds-m-top_medium">
+            <lightning-button variant="outline" label="Create Case" icon-name="utility:choice" onclick={createCase}
+                class="slds-m-left_x-small"></lightning-button>
+        </div>
+        <div class="slds-m-around_medium">
+            <i>Record Type Id is</i>: <b>{recordTypeId}</b> 
+        </div>
+    </lightning-card>
+</template>

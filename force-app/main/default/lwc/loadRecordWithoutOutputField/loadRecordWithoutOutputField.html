@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="LDS Case Without Output Field">
+        Case Number: {casenumber}<br />
+        Case Origin: {caseorigin}<br />
+        Case Type: {casetype}
+    </lightning-card>
+    <lightning-card title="LDS Account Without Output Field">
+        Account Name: {accountname}<br />
+        Account Phone: {accountphone}<br />
+    </lightning-card>
+    <template lwc:if={showContact}>
+        <lightning-card title="LDS Contact Without Output Field">
+            First Name: {contactfirstname}<br />
+            Last Name: {contactlastname}<br />
+            <lightning-button label="Show Contact Data" variant="brand" onclick={handleContactData}></lightning-button>
+
+        </lightning-card>
+    </template>
+    <template lwc:else>
+        No Contact to show!
+    </template>"
+</template>

@@ -1,0 +1,9 @@
+<template>
+    <lightning-card class="slds-card" title="Two Way Binding">
+        <lightning-input value={testName} label="Enter name" onchange={handleChange}></lightning-input>
+    </lightning-card>
+        <p class="slds-p-around_small">The name is:{testName}</p>
+    <lightning-card class="slds-card" title="Getter And Setter">
+        <p class="slds-p-around_small">{handleTotalLessonWatched}</p>
+    </lightning-card>
+</template>

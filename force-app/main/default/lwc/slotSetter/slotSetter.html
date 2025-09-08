@@ -1,0 +1,18 @@
+<template>
+    <c-slot-child-setter>
+        <div class="slds-m-around_medium">
+            <lightning-card title="Coming From Parent">
+                <i><b>This is the child setter component referencing a parent slot data.</b></i>
+            </lightning-card>
+        </div>
+        <div slot="header" class="slds-m-around_medium">
+            Header
+        </div>
+        <div slot="body" class="slds-m-around_medium">
+            Main Content
+        </div>
+        <div slot="footer" class="slds-m-around_medium">
+            Footer
+        </div>
+    </c-slot-child-setter>
+</template>
